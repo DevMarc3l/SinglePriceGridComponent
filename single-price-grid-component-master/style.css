@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+  line-height: 1.5;
+  font-family: "Karla", sans-serif;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem 1rem;
+  display: grid;
+  grid-template-areas:
+    "Summary "
+    "Subscription"
+    "Advantages";
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Summary,
+.Subscription,
+.Advantages {
+  padding: 1.5rem 2rem;
+}
+
+.Summary {
+  grid-area: Summary;
+  background-color: white;
+}
+
+.Summary h2 {
+  color: hsl(179, 62%, 43%);
+}
+
+.Summary h3 {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 0.5rem;
+}
+
+.Summary p {
+  color: hsl(218, 22%, 67%);
+}
+
+.Subscription {
+  grid-area: Subscription;
+  background-color: hsl(179, 62%, 43%);
+  color: white;
+}
+
+.Subscription p:first-of-type {
+  margin-left: 0.5rem;
+  display: inline-block;
+  color: hsl(204, 43%, 93%);
+  transform: translateY(-25%);
+}
+
+.Subscription span {
+  font-size: 2rem;
+}
+
+.Subscription a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  margin-top: 1rem;
+  padding: 0.75rem 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25);
+}
+.Advantages {
+  grid-area: Advantages;
+  background-color: rgba(42, 178, 176, 0.75);
+}
+
+.Advantages ul {
+  list-style: none;
+  color: hsl(204, 43%, 93%);
+}
+
+@media (min-width: 750px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    grid-template-columns: 350px 350px;
+    grid-template-areas:
+      "Summary Summary"
+      "Subscription Advantages";
+  }
+}
